@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MainForm from "./MainForm/MainForm";
 import MainSummary from "./MainSummary/MainSummary";
+import Features from "./FEATURES/Features";
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
 import slugify from "slugify";
@@ -55,7 +56,7 @@ class App extends Component {
         <main>
           <MainForm
             slugify={slugify}
-            features={this.props.features}
+            features={Features}
             selected={this.state.selected}
             updateFeature={this.updateFeature}
             currencyFormat={USCurrencyFormat}

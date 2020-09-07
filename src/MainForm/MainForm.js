@@ -2,11 +2,12 @@ import React from "react";
 
 import FeatureOption from "./FeatureOption/FeatureOption";
 import FeatureList from "./FeatureList/FeatureList";
+import featuress from "../FEATURES/Features";
 
 const mainForm = (props) => {
-  const features = Object.keys(props.features).map((feature, idx) => {
+  const features = Object.keys(featuress).map((feature, idx) => {
     const featureHash = feature + "-" + idx; //"Processor-0"
-    const options = props.features[feature].map((item) => {
+    const options = featuress[feature].map((item) => {
       const itemHash = props.slugify(JSON.stringify(item));
       const selectedOption = props.selected[feature].name;
       return (
